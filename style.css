@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #222;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .container {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  color: #f0ad00;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .current {
+  color: #e6c229;
+  font-weight: bold;
+}
+
+.nav.move {
+  background-color: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.move .current {
+  color: #f0ad00;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url('eraykdrink.png');
+  height: 100vh;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f0ad00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: -2;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  border-bottom: 1px solid #f0ad00;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.content {
+  padding: 4rem 2rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.content h2,
+.content h3,
+.content h4 {
+  color: #e6c229;
+}
+
+.content p {
+  color: #ddd;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+}
